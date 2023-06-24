@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <import type="android.view.View"/>
+        <variable
+            name="signupViewModel"
+            type="com.project.assignmentdiksha.viewModel.SignupViewModel" />
+    </data>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/black">
+
+
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/iv_userimage"
+                android:layout_width="76dp"
+                android:layout_height="76dp"
+                android:layout_marginTop="33.7dp"
+                android:scaleType="fitXY"
+                app:shapeAppearanceOverlay="@style/round"
+                android:layout_marginStart="145dp"
+                android:layout_marginEnd="145dp"
+                android:background="@drawable/ic_baseline_account_circle_24"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:src="@drawable/userimagebg"/>
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/iv_adddpbutton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                app:shapeAppearanceOverlay="@style/round"
+                android:src="@drawable/ic_baseline_add_circle_24"
+                app:layout_constraintEnd_toEndOf="@id/iv_userimage"
+                app:layout_constraintBottom_toBottomOf="@id/iv_userimage"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/filledTextField"
+                android:layout_width="302dp"
+                android:layout_height="65dp"
+                app:boxStrokeColor="@color/white"
+                app:boxStrokeWidth="0dp"
+                app:hintEnabled="false"
+                app:helperText="@{signupViewModel.nameError}"
+                app:helperTextTextColor="#FD0303"
+                android:layout_marginStart="29dp"
+                android:layout_marginEnd="29dp"
+                android:layout_marginTop="29.3dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/iv_userimage"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <EditText
+                    android:id="@+id/et_signupname"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:textColor="@color/black"
+                    android:textSize="12.5sp"
+                    android:hint="Name"
+                    android:textColorHint="@color/black"
+                    android:text="@={signupViewModel.name}"
+                    android:paddingTop="10dp"
+                    android:paddingStart="16dp"
+                    android:drawablePadding="15dp"
+                    android:drawableLeft="@drawable/ic_baseline_person_24"
+                    android:background="@drawable/custombutton"
+                    android:inputType="textPersonName" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/filledTextEmail"
+                android:layout_width="302dp"
+                android:layout_height="65dp"
+                app:boxStrokeColor="@color/white"
+                app:boxStrokeWidth="0dp"
+                app:hintEnabled="false"
+                app:helperTextEnabled="true"
+                app:errorEnabled="true"
+                app:helperText="@{signupViewModel.emailError}"
+                app:helperTextTextColor="#FD0303"
+                android:layout_marginStart="29dp"
+                android:layout_marginEnd="29dp"
+                android:layout_marginTop="26dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/filledTextField"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <EditText
+                    android:id="@+id/et_signupemail"
+                    android:layout_width="302dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="12.5sp"
+                    android:hint="Email"
+                    android:textColor="@color/black"
+                    android:text="@={signupViewModel.email}"
+                    android:inputType="textEmailAddress"
+                    android:maxLength="50"
+                    android:textColorHint="@color/black"
+                    android:paddingTop="10dp"
+                    android:paddingStart="15.7dp"
+                    android:drawablePadding="15dp"
+                    android:drawableLeft="@drawable/ic_baseline_email_24"
+                    android:background="@drawable/custombutton"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/filledTextSignupNumber"
+                android:layout_width="302dp"
+                android:layout_height="65dp"
+                app:boxStrokeColor="@color/white"
+                app:boxStrokeWidth="0dp"
+                app:hintEnabled="false"
+                app:helperText="@{signupViewModel.phoneError}"
+                app:helperTextTextColor="#FD0303"
+                android:layout_marginTop="26dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/filledTextEmail"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <EditText
+                    android:id="@+id/et_signupnumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Phone Number"
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:textColor="@color/black"
+                    android:text="@={signupViewModel.phone}"
+                    android:textSize="12.5sp"
+                    android:paddingTop="10dp"
+                    android:drawablePadding="9dp"
+                    android:textColorHint="@color/black"
+                    android:paddingStart="16dp"
+                    android:background="@drawable/custombutton"
+                    android:drawableLeft="@drawable/ic_baseline_phone_24"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/filledTextPassword"
+                android:layout_width="302dp"
+                android:layout_height="65dp"
+                app:boxStrokeColor="@color/white"
+                app:boxStrokeWidth="0dp"
+                app:hintEnabled="false"
+                app:endIconMode="password_toggle"
+                app:helperText="@{signupViewModel.passError}"
+                app:helperTextTextColor="#FD0303"
+                android:layout_marginStart="29dp"
+                android:layout_marginEnd="29dp"
+                android:layout_marginTop="26dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/filledTextSignupNumber"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <EditText
+                    android:id="@+id/et_signuppassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="12.5sp"
+                    android:hint="Password"
+                    android:textColor="@color/black"
+                    android:text="@={signupViewModel.password}"
+                    android:maxLength="20"
+                    android:textColorHint="@color/black"
+                    android:inputType="textPassword"
+                    android:paddingTop="15dp"
+                    android:paddingBottom="15dp"
+                    android:drawablePadding="15dp"
+                    android:paddingStart="40dp"
+                    android:drawableLeft="@drawable/ic_baseline_vpn_key_24"
+                    android:background="@drawable/custombutton"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <ImageView
+                android:id="@+id/iv_password"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_baseline_vpn_key_24"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="15dp"
+                app:layout_constraintTop_toTopOf="@id/filledTextPassword"
+                app:layout_constraintStart_toStartOf="@id/filledTextPassword"/>
+
+
+            <TextView
+                android:id="@+id/tv_termconditiontext"
+                android:layout_width="299dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="29dp"
+                android:layout_marginStart="32.7dp"
+                android:layout_marginEnd="28.3dp"
+                android:textSize="12.5sp"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:text="By signing up you accept our Terms and Condition."
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/filledTextPassword"/>
+
+            <TextView
+                android:id="@+id/tv_signupbutton"
+                android:layout_width="202dp"
+                android:layout_height="44dp"
+                android:layout_marginStart="79dp"
+                android:layout_marginEnd="79dp"
+                android:layout_marginTop="31.3dp"
+                android:text="SIGNUP"
+                android:onClick="@{_ ->signupViewModel.validation()}"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:background="@drawable/button_bg"
+                app:layout_constraintTop_toBottomOf="@id/tv_termconditiontext"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_haveaccount"
+                android:layout_width="218.3dp"
+                android:layout_height="wrap_content"
+                android:text="Already have an account? Login"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="13.5sp"
+                android:layout_marginStart="71dp"
+                android:layout_marginEnd="71dp"
+                android:layout_marginTop="21dp"
+                android:layout_marginBottom="24dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_signupbutton"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <ProgressBar
+                android:visibility="gone"
+                android:id="@+id/loader"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:elevation="45dp"
+                style="?android:attr/progressBarStyleLarge"
+                android:indeterminateTint="@color/yellow"
+                android:outlineSpotShadowColor="@color/purple_700"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</layout>
+
+

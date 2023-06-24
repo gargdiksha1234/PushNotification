@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "312467835213",
+    "project_id": "pushnotification-bf783",
+    "storage_bucket": "pushnotification-bf783.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:312467835213:android:4cee6cad3c67e3778dcf04",
+        "android_client_info": {
+          "package_name": "com.project.assignmentdiksha"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "312467835213-sgfp6n8o0lvrg8skdltuthscap1sk3hr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDcRN-accDIgyqx3c7bZ2cYTJane9jJghY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "312467835213-sgfp6n8o0lvrg8skdltuthscap1sk3hr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

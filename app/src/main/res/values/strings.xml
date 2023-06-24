@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">AssignmentDiksha</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="default_notification_channel_id" translatable="false">Push NotificationChannel</string>
+
+    <integer-array name="progress_colors">
+        <item>@color/white</item>
+        <item>@color/red</item>
+        <item>@color/yellow</item>
+        <item>@color/dark_green</item>
+        <item>@color/orange</item>
+    </integer-array>
+    <string name="enter_your_email_and_new_password">Enter your email and new password</string>
+    <string name="email">Email</string>
+    <string name="don_t_have_to_change_password">Don\'t have to change password</string>
+    <string name="change_password">Change Password</string>
+    <string name="password">Password</string>
+    <string name="name">Name</string>
+</resources>
