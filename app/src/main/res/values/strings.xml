@@ -17,4 +17,11 @@
     <string name="change_password">Change Password</string>
     <string name="password">Password</string>
     <string name="name">Name</string>
+    <string name="emails">Email</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="already_have_an_account_login">Already have an account? Login</string>
+    <string name="signup">SIGNUP</string>
+    <string name="by_signing_up_you_accept_our_terms_and_condition">By signing up you accept our Terms and Condition.</string>
+    <string name="Password1">Password</string>
+    <string name="name1">Name</string>
 </resources>

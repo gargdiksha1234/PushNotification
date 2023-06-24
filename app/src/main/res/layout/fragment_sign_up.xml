@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <data>
         <import type="android.view.View"/>
@@ -58,13 +57,13 @@
                 app:layout_constraintTop_toBottomOf="@id/iv_userimage"
                 app:layout_constraintStart_toStartOf="parent">
 
-                <EditText
+                <androidx.appcompat.widget.AppCompatEditText
                     android:id="@+id/et_signupname"
                     android:layout_width="match_parent"
                     android:layout_height="45dp"
                     android:textColor="@color/black"
                     android:textSize="12.5sp"
-                    android:hint="Name"
+                    android:hint="@string/name1"
                     android:textColorHint="@color/black"
                     android:text="@={signupViewModel.name}"
                     android:paddingTop="10dp"
@@ -94,12 +93,12 @@
                 app:layout_constraintTop_toBottomOf="@id/filledTextField"
                 app:layout_constraintStart_toStartOf="parent">
 
-                <EditText
+                <androidx.appcompat.widget.AppCompatEditText
                     android:id="@+id/et_signupemail"
                     android:layout_width="302dp"
                     android:layout_height="wrap_content"
                     android:textSize="12.5sp"
-                    android:hint="Email"
+                    android:hint="@string/emails"
                     android:textColor="@color/black"
                     android:text="@={signupViewModel.email}"
                     android:inputType="textEmailAddress"
@@ -126,11 +125,11 @@
                 app:layout_constraintTop_toBottomOf="@id/filledTextEmail"
                 app:layout_constraintStart_toStartOf="parent">
 
-                <EditText
+                <androidx.appcompat.widget.AppCompatEditText
                     android:id="@+id/et_signupnumber"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Phone Number"
+                    android:hint="@string/phone_number"
                     android:inputType="number"
                     android:maxLength="10"
                     android:textColor="@color/black"
@@ -162,12 +161,12 @@
                 app:layout_constraintTop_toBottomOf="@id/filledTextSignupNumber"
                 app:layout_constraintStart_toStartOf="parent">
 
-                <EditText
+                <androidx.appcompat.widget.AppCompatEditText
                     android:id="@+id/et_signuppassword"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textSize="12.5sp"
-                    android:hint="Password"
+                    android:hint="@string/Password1"
                     android:textColor="@color/black"
                     android:text="@={signupViewModel.password}"
                     android:maxLength="20"
@@ -182,7 +181,7 @@
 
             </com.google.android.material.textfield.TextInputLayout>
 
-            <ImageView
+            <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/iv_password"
                 android:layout_width="20dp"
                 android:layout_height="20dp"
@@ -203,7 +202,7 @@
                 android:textSize="12.5sp"
                 android:textColor="@color/white"
                 android:gravity="center"
-                android:text="By signing up you accept our Terms and Condition."
+                android:text="@string/by_signing_up_you_accept_our_terms_and_condition"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/filledTextPassword"/>
@@ -215,7 +214,7 @@
                 android:layout_marginStart="79dp"
                 android:layout_marginEnd="79dp"
                 android:layout_marginTop="31.3dp"
-                android:text="SIGNUP"
+                android:text="@string/signup"
                 android:onClick="@{_ ->signupViewModel.validation()}"
                 android:textColor="@color/white"
                 android:gravity="center"
@@ -229,7 +228,7 @@
                 android:id="@+id/tv_haveaccount"
                 android:layout_width="218.3dp"
                 android:layout_height="wrap_content"
-                android:text="Already have an account? Login"
+                android:text="@string/already_have_an_account_login"
                 android:gravity="center"
                 android:textColor="@color/white"
                 android:textSize="13.5sp"
